@@ -2443,5 +2443,64 @@
 # bank.withdraw(4000)
 # bank.disp()
 
+# --------------------------------------------------------------------------
+
+
 # ------------------------------------------------------------------------
 
+#                               ABSTRACTION
+#       ABSTRACTION is a process for hiding the complexity of a system and display only essential feature for the end user.
+
+#                               ABSTRACTION METHOD
+#       These are the function/method which has function name but does not have function declarction or method body.
+#       SYNTAX:
+#               @abstract_method
+#               def add():
+#                       pass
+
+#                               ABSTRACT CLASS
+# A class which contains atleast one abstract method.
+# SYNTAX :
+#               class abc:
+#                       def add(a,b):
+#                               print(l+b)
+#                       def sub(a,b):
+#                               pass
+
+from abc import ABC,abstractmethod
+
+class animal(ABC):
+    @abstractmethod
+    def makesound(self):
+        pass
+class dog(animal):
+    def makesound(self):
+        return 'bark'
+class cat(animal):
+    def makesound(self):
+        return 'meow'
+
+obj1 = dog()
+obj2 = cat()
+
+print(obj1.makesound())
+print(obj2.makesound())
+
+from abc import ABC, abstractmethod
+
+class cal(ABC):
+    @abstractmethod
+    def calculate(self):
+        pass
+
+class add(cal):
+    def calculate(self):
+        return "Addition"
+class sub(cal):
+    def calculate(self):
+        return "Subraction"
+
+obj1 = add()
+obj2 = sub()
+print(obj1.calculate())
+print(obj2.calculate())
