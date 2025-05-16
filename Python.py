@@ -2422,23 +2422,26 @@
 
 # -------------------------------------------------------
 
-class bank:
-    bal = 2000
-    @classmethod
-    def deposit(cls,new):
-        cls.bal += new
-    @classmethod
-    def disp(cls):
-        print(cls.bal)
+# class bank:
+#     bal = 2000
+#     @classmethod
+#     def deposit(cls,new):
+#         cls.bal += new
+#     @classmethod
+#     def disp(cls):
+#         print(cls.bal)
     
-    @classmethod
-    def withdraw(cls, new):
-        if cls.bal < new:
-            print("Insufficient Balance")
-        else:
-            cls.bal -= new
+#     @classmethod
+#     def withdraw(cls, new):
+#         if cls.bal < new:
+#             print("Insufficient Balance")
+#         else:
+#             cls.bal -= new
 
-bank.deposit(1000)
-bank.deposit(3000)
-bank.withdraw(4000)
-bank.disp()
+# bank.deposit(1000)
+# bank.deposit(3000)
+# bank.withdraw(4000)
+# bank.disp()
+
+# ------------------------------------------------------------------------
+
