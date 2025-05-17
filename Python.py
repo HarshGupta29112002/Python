@@ -1925,11 +1925,13 @@
 
 
 # ------------------------------------------------
-# *********
-#  *******
-#   *****
-#    ***
-#     *
+'''
+*********
+ *******
+  *****
+   ***
+    *
+'''
 # ------------------------------------------------
 
 # n=5
@@ -2021,11 +2023,13 @@
 # print(obj2)
 
 # ---------------------------------
-# * 
-#  *
-# *
-#  *
-# *
+'''
+* 
+ *
+*
+ *
+*
+'''
 # ---------------------------------
 
 # for i in range(1,6):
@@ -2037,11 +2041,13 @@
 #     print()
 
 # --------------------------
-# * * * * * 
-# * * *   * 
-# * * * * *
-# *   * * *
-# * * * * *
+'''
+* * * * * 
+* * *   * 
+* * * * *
+*   * * *
+* * * * *
+'''
 # --------------------------
 
 # n=5
@@ -2059,11 +2065,13 @@
 #     print()
     
 # --------------------------------------
-# * * * * * 
-# *       * 
-# *   *   *
-# *       *
-# * * * * *
+'''
+* * * * * 
+*       * 
+*   *   *
+*       *
+* * * * *
+'''     
 # --------------------------------------
 
 # n=5
@@ -2083,20 +2091,20 @@
 
 # ------------------------------------------------------------------------
 
-#                           CONSTRUCTOR-------------->>>>>>>>>
+'''                          CONSTRUCTOR-------------->>>>>>>>>
 
-# Constructor is a special / Dunder method in python.
-# Constructors can be called using __init__
-# Whenever an object is created constructor will get invoked automatically.
-# By default constructor will have one argument inside it(self).
-# constructor is used to declare and initialize the instance variables.
-# By default whenever we create a object default constructor will be present.
+Constructor is a special / Dunder method in python.
+Constructors can be called using __init__
+Whenever an object is created constructor will get invoked automatically.
+By default constructor will have one argument inside it(self).
+constructor is used to declare and initialize the instance variables.
+By default whenever we create a object default constructor will be present.
 
-# _ -> private
-# __ -> private pro[security purpose]
-# __ __ -> special method or Dunder method
+_ -> private
+__ -> private pro[security purpose]
+__ __ -> special method or Dunder method
 
-
+'''
 # ------------------------------------------------------------------------
 # class Student:
 #     def __init__(self,name,std):
@@ -2136,40 +2144,40 @@
 
 # ----------------------------------------------------------------------------------
 
-# difference between method and constructor
+'''difference between method and constructor
 
-#            Method                                     |                Constructor
-                                                      # |
-# ______________________________________________________|___________________________________________________________________________
-                                                      # |
-# 1. Methods can have any name                          |    1. Constructor name is always __init__
-                                                      # |
-# 2. Per object we can have many methods.               |    2. Per object only one constructor can be created 
-                                                      # |
-# 3. Inside method, we can write business, code logic   |    3. Inside constructor, only used to initialize th variable
-                                                      # |
-# 4. Method is executed whenever we call the method     |    4. Constructor is executed whenever a object is created
-#    name.                                              |
+           Method                                     |                Constructor
+                                                      |
+______________________________________________________|___________________________________________________________________________
+                                                      |
+1. Methods can have any name                          |    1. Constructor name is always __init__
+                                                      |
+2. Per object we can have many methods.               |    2. Per object only one constructor can be created 
+                                                      |
+3. Inside method, we can write business, code logic   |    3. Inside constructor, only used to initialize th variable
+                                                      |
+4. Method is executed whenever we call the method     |    4. Constructor is executed whenever a object is created
+   name.                                              |
 
-
+'''
 # ------------------------------------------------------------------------------------------------------------------------------
 
-# In modifying the properties we have:
-#                       i.) object method
-#                       ii.) class method
+'''In modifying the properties we have:
+                      i.) object method
+                      ii.) class method
 
-#                                       ****************** OBJECT METHOD **********************
+                                      ****************** OBJECT METHOD **********************
 
-# object method is used to access or modify the object members only.
-# SYNTAX : 
-#               def f_name(self):
-#                       statement block
-#               obj f_name(self, new)
-#               obj f_name(obj)
+object method is used to access or modify the object members only.
+SYNTAX : 
+              def f_name(self):
+                      statement block
+              obj f_name(self, new)
+              obj f_name(obj)
 
-# NOTE: When we want to access the object method using class we need to pass a object for it, but when we want to access the object method we no need to pass object for that, pass the value, which we wanted to be updated.
+NOTE: When we want to access the object method using class we need to pass a object for it, but when we want to access the object method we no need to pass object for that, pass the value, which we wanted to be updated.'''
 
-# -----------------------------------------------------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------------------------------------------------
 
 # class std:
 #     s_name = "Pratik"
@@ -2214,20 +2222,20 @@
 
 
 # --------------------------------------------------------------------------------------------------------------
+'''
+                              *************__CLASS METHOD__***************
+Class method is used to access or modify the class members only
+SYNTAX : 
+              def f_name(cls):
+                      statement block
+              obj1.f_name(args)
+              class_name.f_name(args)
+NOTE: Here in class method before defining it we should use a decorator called as @classmethod
 
-#                               *************__CLASS METHOD__***************
-# Class method is used to access or modify the class members only
-# SYNTAX : 
-#               def f_name(cls):
-#                       statement block
-#               obj1.f_name(args)
-#               class_name.f_name(args)
-# NOTE: Here in class method before defining it we should use a decorator called as @classmethod
-# 
-# Here we need to pass 'cls' as the argument inside the function
-# Its not mandatory to pass 'cls' as the variable  we can use anything, but according to standards we use 'cls' as arguments.
-# Here if we call the object method by using both object and class passing address of the object is mandatory.
-
+Here we need to pass 'cls' as the argument inside the function
+Its not mandatory to pass 'cls' as the variable  we can use anything, but according to standards we use 'cls' as arguments.
+Here if we call the object method by using both object and class passing address of the object is mandatory.
+'''
 # --------------------------------------------------------------------------------------------------------------
 
 # class std:
@@ -2443,64 +2451,115 @@
 # bank.withdraw(4000)
 # bank.disp()
 
-# --------------------------------------------------------------------------
 
 
-# ------------------------------------------------------------------------
+# ------------------------------------------------------------------------------------------------------------------------------
+'''
+                                                    ABSTRACTION
 
-#                               ABSTRACTION
-#       ABSTRACTION is a process for hiding the complexity of a system and display only essential feature for the end user.
+      ABSTRACTION is a process for hiding the complexity of a system and display only essential feature for the end user.
 
-#                               ABSTRACTION METHOD
-#       These are the function/method which has function name but does not have function declarction or method body.
-#       SYNTAX:
-#               @abstract_method
-#               def add():
-#                       pass
+                                                    ABSTRACTION METHOD
 
-#                               ABSTRACT CLASS
-# A class which contains atleast one abstract method.
-# SYNTAX :
-#               class abc:
-#                       def add(a,b):
-#                               print(l+b)
-#                       def sub(a,b):
-#                               pass
+      These are the function/method which has function name but does not have function declarction or method body.
+      SYNTAX:
+              @abstract_method
+              def add():
+                      pass
 
-from abc import ABC,abstractmethod
+                                                    ABSTRACT CLASS
+A class which contains atleast one abstract method.
 
-class animal(ABC):
-    @abstractmethod
-    def makesound(self):
-        pass
-class dog(animal):
-    def makesound(self):
-        return 'bark'
-class cat(animal):
-    def makesound(self):
-        return 'meow'
+SYNTAX :
+              class abc:
+                      def add(a,b):
+                              print(l+b)
+                      def sub(a,b):
+                              pass
+'''
+# -------------------------------------------------------------------------------------------------------------------------------
 
-obj1 = dog()
-obj2 = cat()
+# from abc import ABC,abstractmethod
 
-print(obj1.makesound())
-print(obj2.makesound())
+# class animal(ABC):
+#     @abstractmethod
+#     def makesound(self):
+#         pass
+# class dog(animal):
+#     def makesound(self):
+#         return 'bark'
+# class cat(animal):
+#     def makesound(self):
+#         return 'meow'
 
-from abc import ABC, abstractmethod
+# obj1 = dog()
+# obj2 = cat()
 
-class cal(ABC):
-    @abstractmethod
-    def calculate(self):
-        pass
+# print(obj1.makesound())
+# print(obj2.makesound())
 
-class add(cal):
-    def calculate(self):
-        return "Addition"
-class sub(cal):
-    def calculate(self):
-        return "Subraction"
+# from abc import ABC, abstractmethod
 
-obj1 = add()
-obj2 = sub()
-print(obj1.calculate())
-print(obj2.calculate())
+# class cal(ABC):
+#     @abstractmethod
+#     def calculate(self):
+#         pass
+
+# class add(cal):
+#     def calculate(self):
+#         return "Addition"
+# class sub(cal):
+#     def calculate(self):
+#         return "Subraction"
+
+# obj1 = add()
+# obj2 = sub()
+# print(obj1.calculate())
+# print(obj2.calculate())
+
+
+# ------------------------------------------------------------------------------------------------------------------------------
+'''Polymorphism
+It is a process of a method, operator acting in different ways in different situation.
+Ex:-'+'
+10+10=20
+'Hi'+'Bye'
+Here addition operator is acting in 2 different way sin 2 different situation.
+1)addition for real values(int, float)
+2)Concatination for string values
+
+*In polymorphism we have 2 types
+1)method overloading
+2)operator overloading
+
+1)method overloading: It is using same method name for multiple types types
+Ex:
+"Java"
+public class MethodOverloadingExample {
+    public static void add(int a, int b) {
+        System.out.println(a + b);
+    }
+    public static void add(int a, int b, int c) {
+        System.out.println(a + b + c);
+    }
+    public static void main(String[] args) {
+        add(10, 20);
+        add(1, 2, 3);
+    }
+}
+
+"Python"
+def add(a,b):
+    print(a+b)
+prev=add
+def add(a,b,c):
+    print(a+b+c)
+prev(10,20)
+add(1,2,3)
+
+In python method overloading is not possible so, we should use method overriding
+->Monkey Patching: Since method overloading is not possible in Python, we use Monkey Patching where
+  it stores method name inside a separate variable so that even though the methods names are same we
+  can access both the method easily without any error. 
+'''
+# --------------------------------------------------------------------------------------------------------------------------------
