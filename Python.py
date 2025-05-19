@@ -2563,3 +2563,66 @@ In python method overloading is not possible so, we should use method overriding
   can access both the method easily without any error. 
 '''
 # --------------------------------------------------------------------------------------------------------------------------------
+
+
+'''
+                                            ENCAPSULATION/ACCESS SPECIFIERS
+
+1.] Protected access specifiers : 
+                           Its a access specifiers which should provide protection for the members of the class, objects, but its not possible in python.
+
+    [NOTE] : To make any variable or object as protected use single underscore(_) before it.
+
+    SYNTAX : 
+             class Hero : 
+                _a = 10
+                @classmethod
+                def _disp():
+                    statement block
+                @staticmethod
+                def _add(4d):
+                    print c+d
+                
+                def __init__(self, var1, ..., varn):
+                    self.var1 = var1
+                    .
+                    .
+                    .
+                    self.varn = varn
+                obj1 = Hero(1.....100)
+                obj1.disp()
+
+2.] Private access specifiers : 
+                               These are the access specifiers which will provide security to the members of the class & it will resist the access of memners of the class.
+
+                               To declare the members of the class as private access specifiers the method or the variable must be start with double underscore (__).
+
+    SYNTAX :
+             class c_name:
+                a = 10
+                b=20
+                c=30
+                def __ch_b(self,new):
+                    return __ch_b
+
+                ob = c_name(40)
+                print(__ch_b)
+'''
+
+class Morning:
+    __m = 100
+
+    def __init__(self, c, d):
+        self.c = c
+        self.__d = d
+
+    def display(self):
+        print(self.c + self.__d)
+
+    @classmethod
+    def ch.__m(cls, new):
+        cls.ch__m = new
+
+obj1 = Morning(10,20)
+obj1.display()
+print(obj1.__d)
