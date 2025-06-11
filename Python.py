@@ -2463,6 +2463,7 @@ Here if we call the object method by using both object and class passing address
 
       These are the function/method which has function name but does not have function declarction or method body.
       SYNTAX:
+              from abc import ABC, abstractmethod
               @abstract_method
               def add():
                       pass
@@ -2519,7 +2520,8 @@ SYNTAX :
 
 
 # ------------------------------------------------------------------------------------------------------------------------------
-'''Polymorphism
+'''                                             Polymorphism
+
 It is a process of a method, operator acting in different ways in different situation.
 Ex:-'+'
 10+10=20
@@ -2561,6 +2563,21 @@ In python method overloading is not possible so, we should use method overriding
 ->Monkey Patching: Since method overloading is not possible in Python, we use Monkey Patching where
   it stores method name inside a separate variable so that even though the methods names are same we
   can access both the method easily without any error. 
+
+2.] Operator overloading
+
+class Arithmetic:
+    def __init__(self,a):
+        self.a = a
+    def __add__(self,others):
+        return self.a + others.a
+    def __sub__(self, others):
+        return self.a - others.a
+    
+    obj1 = Arithmetic(20)
+    obj2 = Arithmetic(30)
+    print(obj1+obj2)
+    print(obj1-obj2)
 '''
 # --------------------------------------------------------------------------------------------------------------------------------
 
@@ -2609,20 +2626,299 @@ In python method overloading is not possible so, we should use method overriding
                 print(__ch_b)
 '''
 
-class Morning:
-    __m = 100
+# class Morning:
+#     __m = 100
 
-    def __init__(self, c, d):
-        self.c = c
-        self.__d = d
+#     def __init__(self, c, d):
+#         self.c = c
+#         self.__d = d
 
-    def display(self):
-        print(self.c + self.__d)
+#     def display(self):
+#         print(self.c + self.__d)
 
-    @classmethod
-    def ch.__m(cls, new):
-        cls.ch__m = new
+#     @classmethod
+#     def ch.__m(cls, new):
+#         cls.ch__m = new
 
-obj1 = Morning(10,20)
-obj1.display()
-print(obj1.__d)
+# obj1 = Morning(10,20)
+# obj1.display()
+# print(obj1.__d)
+
+# ---------------------------------------------------------------------------------------------------------------
+
+'''                         MULTIPLE INHERITANCE                    '''
+
+# class Grand:
+#     grand_name = "kings pappa"
+
+#     def __init__(self, grand_age):
+#         self.grand_age = grand_age
+#     def display(self):
+#         print(f"The grand name is {self.grand_name} and age is {self.grand_age}")
+
+# class Parent(Grand):
+#     parent_name = "king"
+
+#     def __init__(self, parent_age, grand_age):
+#         super().__init__(grand_age)
+#         self.parent_age = parent_age
+#     def display(self):
+#         super().display()
+#         print(f"The parent name is {self.parent_name} and age is {self.parent_age}")
+    
+# class Child(Parent):
+#     child_name = "Prince"
+
+#     def __init__(self, child_age, parent_age, grand_age):
+#         super().__init__(parent_age, grand_age)
+#         self.child_age = child_age
+
+#     def display(self):
+#         super().display()
+#         print(f"The child name is {self.child_name} and age is {self.child_age}")
+
+# obj = Child(22,52,108)
+# obj.display()
+# ob = Parent(52,108)
+# ob.display()
+
+        
+'''                     MULTI-LEVEL INHERITANCE                     '''
+
+# class Mom:
+
+#     mom_name = "mumma"
+
+#     def __init__(self, mom_age):
+#         self.mom_age = mom_age
+    
+#     def display(self):
+#         print(f"Mom name is {self.mom_name} and age is {self.mom_age}")
+
+# class Dad:
+#     dad_name = "daddy"
+
+#     def __init__(self, dad_age):
+#         self.dad_age = dad_age
+#     def display(self):
+#         print(f"Dad name is {self.dad_name} and age is {self.dad_age} ")
+
+# class Child(Mom, Dad):
+#     child_name = "beta"
+
+#     def __init__(self, child_age, mom_age, dad_age):
+#         # super().__init__(mom_age, dad_age)
+#         Mom.__init__(self, mom_age)
+#         Dad.__init__(self, dad_age)
+#         self.child_age = child_age
+#     def display(self):
+#         # super().display()
+#         Mom.display(self)
+#         Dad.display(self)
+#         print(f"Child name is {self.child_name} and age is {self.child_age}")
+
+# obj = Child(22, 45, 52)
+# obj.display()
+
+# -------------------------------------------------------------------------------------------------------------------
+
+# a = ["Hello", "Bye", "Prati", "Comming"]
+# b=[]
+# for i in range(0,len(a)):
+#     if i%2==0:
+#         b.append(a[i][::-1])
+#     else:
+#         b.append(a[i])
+
+# print(b)
+
+# n = 10
+# l = []
+# for x in range (1, n+1):
+#     l.append(x**2)
+# print(l)
+
+'''
+List Compehension is a elegant way to define and to create the list based on the existing list.
+Syntax:
+If you have no condition : [operation for i in iterable]
+If condition is there  : [operation for i in iterable if condiition]
+If-else condition is there : [operation if <condition> else operation for i in collection]
+'''
+
+# n = 10
+# L = ([i for i in range(1, n+1)])
+# print([i**2 if i%2==0 else i**3 for i  in L])
+
+#WAP to extract all the integer values inside a list using list comprehension.
+# L = ['hello', 10, 20.2, 2, 'Harsh', 3, 4]
+# print([i for i in L if type(i)==int]) 
+# print([type(i)==int for i in L]) 
+
+# ip = ['Hi', 'Prati', 'How', 'are', 'you']
+# print([len(ip[i]) if i%2==0 else ip[i] for i in range (0, len(ip))])
+
+# ip = 'Python is hard naaa'
+# l = ip.split()
+# print([len(l[i]) if i%2==0 else l[i][::-1] for i in range (0, len(l))])
+
+# print([len(l[i]) if i%2==0 else l[i][::-1] for i in range (0, len(l))])
+
+# print([len((input("Enter : ").split())[i]) if i%2==0 else (input("Enter : ").split())[i][::-1] for i in range (0, (input("Enter : ").split()))])
+
+# wap to extract key value pair of a dict only if the value is integer
+# a = {1: "Hi", 2:"Bye",3:400, 4:600}
+# print([(i,a[i]) for i in a if type(a[i])==int])
+
+
+# wap to extract key value pair of a dict only if the value is str
+# a = {"h": 1, 2:"Bye",3:400, 4:600}
+# print([(i,a[i]) for i in a if type(i)==str])
+
+# a = {"h": 1, 2:"Bye",3:400, 4:600}
+# print([(i,a[i]) for i in a if type(i)==int and type(a[i])==str])
+
+
+'''
+SET Comprehension
+'''
+
+# a = ({ i**2 if i%2==0 else i**3 for i in range(1,11)})
+# print(a)
+
+# a = 'abcd abcde abc ab'
+# print({(i, len(i)//2) if len(i)%2==0 else (i, len(i)) for i in a.split()})
+
+# print({1**2 if i%2==0 else i**3 for i in range(0,10)})
+
+# a = [('A',360), ('B',280), ('C',40)]
+# print({a[i][0]:a[i][1]//5 for i in range(0,len(a))})
+
+
+# --------------------------------------------------------------------------
+
+# username = input("Enter Username : ")
+# password = input("Enter Password : ")
+
+# i=0
+
+# while i < 10:
+#     new_pass = input("Enter new password : ")
+#     if new_pass == password:
+#         print("correct")
+#         break
+#     else:
+#         print("Wrong password please retry")
+        
+#     i+=1
+
+
+# ------------------------------------------------------------------------------------------
+'''
+PACKING :
+           - Its a process of adding all the individual data items/values into the collection.
+           - We can do packing on all the data types, but we can store in tuple more (As it is highly secured)
+           - NOTE:
+                    To do packing tuple we should use *(star) args.
+           - In packing we have 2 types:
+                1.] Tuple packing (Single packing):
+                                    Its adding or storing all the data items inside a tuple collection.
+                        SYNTAX :
+                                    def f_name(*args):
+                                        statement block
+                                    f_name()
+
+                2.] Dict packing (Double packing) :
+                                    Its string or adding all the data items or values inside a dict collection.
+                                    Data items must be in key and value pair.
+                        SYNTAX :
+                                    def f_name(**args):
+                                        statement block
+                                    f_name()
+'''
+
+# a = (1,3,4+4j)
+# z=()
+# def tup(*a):
+#     z=()
+#     for i in a:
+#         if type(i)==int:
+#             z+=(i,)
+#     print(z)
+
+# tup(1,3,4+4j)
+
+# ----------------------------------------------------------------------------------------
+
+'''
+
+                                   # DECORATOR #
+
+                                   
+# Adding some additional functionality for the existing function or object.
+# Whenever we want to use decorator, we need to have some pre-task and post-task init.
+# It is of 2 types :-
+        *] Inbuilt Decorator:
+                                - Which are already defined by the developers.
+                                - Ex.:
+                                        1.] @classmethod
+                                        2.] @staticmethod
+                                        3.] @abstractmethod
+
+        *] User Defined Decorator:
+                                - These are the decorators which are created based on user requirement.
+                                - SYNTAX :
+                                            def deconame(adress):
+                                                def inner(*args, **kwargs):
+                                                    pretask
+                                                    adress(*args, **kwargs)
+                                                    posttask
+                                                return inner
+                                            
+                                            @deconame
+                                            def f_name(Agrs):
+                                                statement block
+                                - adress will be the actual address of the function.
+                                - To declare any function/method as decorator, we must have '@' at the starting of it.
+
+
+'''
+
+# def insta(func):
+#     def inner(*args, **kwargs): #packing
+#         print("successfuly logged in to insta")
+
+#         func(*args, **kwargs)   #unpacking
+#         print("Bye Bye insta")
+#     return inner
+
+# @insta
+# def post():
+#     print("post a pic")
+# post()
+
+# @insta
+# def reel():
+#     print("Post a reel")
+# reel()
+
+
+'''
+
+                                        # DATABASE/SQL CONNECTIVITY #
+
+#] This phenomenon helps the control to interact with the DB.
+#] This process helps the user to communicate between the user and the DB.
+#] We need to create relationship between the user and DB to interact
+EG.:
+    import sqlite3
+    var = sqlite.connect('data.db')
+
+#] CURSOR() :- It is pin point to the initial address of the queries.
+#] EXECUTE() :- Using execute, we can write the sql queries.
+#] COMMIT() :- It will save all the sql queries inside the function and to connect with DB.
+#] CLOSE() :- It will enclose the ratio between DB and a user. 
+
+'''
+
+
