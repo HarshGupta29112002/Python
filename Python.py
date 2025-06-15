@@ -2519,6 +2519,41 @@ SYNTAX :
 # print(obj2.calculate())
 
 
+# from abc import ABC, abstractmethod
+
+# class Car(ABC):
+#     def show(self):
+#         print("Every car has 4 wheels")
+#     @abstractmethod
+#     def speed(self):
+#         pass
+
+# class Maruti(Car):
+#     def speed(self):
+#         print("Maruti speed is 100km/hr")
+
+# class Suzuki(Car):
+#     def speed(self):
+#         print("Suzuki speed is 70km/hr")
+
+# obj1 = Maruti()
+# obj1.show()
+# obj1.speed()
+
+# obj2 = Suzuki()
+# obj2.show()
+# obj2.speed()
+
+'''
+
+The following will through error because we can not call abstract class
+
+obj = Car()
+obj.show()
+obj.speed()
+
+'''
+
 # ------------------------------------------------------------------------------------------------------------------------------
 '''                                             Polymorphism
 
@@ -2921,4 +2956,18 @@ EG.:
 
 '''
 
+'''
 
+                                        # FILE HANDLING #
+#] File handling is nothing but writing some data into the file and reading some data from the file.
+#] File is a container, which holds data inside it.
+#] In python 'file handling' can be done using opne() ['we can create file']
+#] SYNTAX to create a file is 
+                => var = open('f_name.extends','mode')
+                extends :- text, CSV etc (kind of file we are choosing to read and write)
+                mode :- 
+                        1.] read ('r')
+                        2.] write ('w')
+                        3.] append ('w')
+
+'''
