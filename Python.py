@@ -2604,7 +2604,7 @@ In python method overloading is not possible so, we should use method overriding
 class Arithmetic:
     def __init__(self,a):
         self.a = a
-    def __add__(self,others):
+    def __add__(self,others):           # These are also called __MAGIC METHODS__ which has double underscore in the start and end.
         return self.a + others.a
     def __sub__(self, others):
         return self.a - others.a
@@ -2614,6 +2614,26 @@ class Arithmetic:
     print(obj1+obj2)
     print(obj1-obj2)
 '''
+
+'''
+            # The following code is not the example of polymorphism.
+
+class A:
+    def show(self):
+        print("welcome")
+    def show(self, fname=''):
+        print("welcome", fname)
+    def show(self, fname = '', sname = ''):
+        print("welcome", fname, sname)
+
+obj = A()
+obj.show()
+obj.show('Harsh')
+obj.show('Harsh', 'Gupta')
+
+'''
+
+
 # --------------------------------------------------------------------------------------------------------------------------------
 
 
