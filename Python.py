@@ -2971,3 +2971,56 @@ EG.:
                         3.] append ('w')
 
 '''
+
+
+# ----------------------------------------------------------------------------------------------------
+
+'''
+
+                                        # exception handling #
+
+'''
+                                #___________ ZERODIVISION___________ #
+# def div():
+#     try:
+#         a = int(input('Enter num 1: '))
+#         b = int(input('Enter num 2: '))
+#         c=a/b
+#         print(int(c))
+#     except ZeroDivisionError:
+#         print('value of b should be more than 0')
+#     except ValueError:
+#         print('It should be a integer')
+# div()
+
+                                    # EXCEPTION IS HANDLED #
+
+# def sam():
+#     try:
+#         i=1
+#         while True:
+#             print(i)
+#             i+=1
+#     except Exception:
+#         print('exception is handled')
+# sam()
+
+                                    #_________ RAISE VALUE ERROR _________#
+
+# a =int(input('Enter the value : '))
+# if a>10:
+#     print("happy")
+# else:
+#     raise ValueError('value is less than 10')
+
+                                    #_________ ASSERT _________#
+'''
+s = input('Enter the value')
+assert s==s[::-1], 'given string is not a palindrome'
+print('palindrome')
+
+
+a = input("enter the name : ")
+assert a=="Harsh", 'Name is not Harsh'
+print('name is Harsh')
+'''
