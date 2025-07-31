@@ -1089,7 +1089,7 @@
 # a = "hi everyone good morning"
 # print(a.split())
 # print(a.split('o'))
-# print(a.split('o',2)) # ,2 is for how many number of times particular character should be splited here "o" will be splited 2 times
+# print(a.split('o',2)) # ,2 is for how many number of times particular character should be splited, here "o" will be splited 2 times(till 2 encounter only)
 
 # ---------------------------------------------------------------------------------------------------------------------------
 
@@ -1161,13 +1161,15 @@
 # print("".join(a))
 
 # WAP to find whether a number is prime or not
+
 # a=int(input())
 
 # for i in range(1,a+1):
 #     if a==1:
 #         print("Its neither prime nor composite")
-#     if a%a==0 and a%1==0 and (a%):
+#     if a%a==0 and a%1==0:
 #         print("Its a prime number")
+#         break
 #     else:
 #         print("Its a composite number")
 
@@ -2600,6 +2602,7 @@ In python method overloading is not possible so, we should use method overriding
   can access both the method easily without any error. 
 
 2.] Operator overloading
+phenomenon of making operators to work based on user requirement
 
 class Arithmetic:
     def __init__(self,a):

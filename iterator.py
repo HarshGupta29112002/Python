@@ -27,7 +27,7 @@ Iterator :
 # print(next(i))
 # print(next(i))
 # print(next(i))
-# print(next(i))
+# print(next(i)) # StopIteration error will be raised if we try to access the next value after the last value of the collection.
 
 # ------------------------------------------
 '''
@@ -66,6 +66,8 @@ No typecasting is required to print the values                    | Type casting
                                                                   |
 
 '''
+
+
 # decorator 
 # file handling
 # db connecti
